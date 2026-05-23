@@ -38,9 +38,9 @@ I'm a resource hoarder and have had to scour across the internet to try and get 
 I want to try to organize what I have found as best I can in one place and the idea I came up with for that is writing a mini-booklet inspired by the NixOS flake book which is a god send for every up and coming NixOS user. While I don't want to get as specific into the implementation as them, I do want to have the pointers to all of that organized so a similar experience is available.
 > [NixOS Flakes Book](https://nixos-and-flakes.thiscute.world/)
 
-My goal with the mini-booklet is to do two main things.
-1. Make decision framework and variables to consider for people more clear.
-2. Bring together information highly useful for making decisions in this space.
+> [!important] My goal with the mini-booklet is to do two main things.
+> 1. Make decision frameworks and variables to consider for people more clear.
+> 2. Bring together information highly useful for making decisions in this space.
 
 If we can beat down some of the context paralysis by limiting the scope of the setup problem in people's minds and providing them easy access to a lot of the relevant info in one space I think that could help a lot.
 
