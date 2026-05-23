@@ -28,8 +28,7 @@ export default defineConfig({
           { text: 'Low Level Pieces', link: '/inference_backend/tensor_libraries_gpu_kernels_drivers_&_the_like' },
           { text: 'Quantization', link: '/inference_backend/quantization' },
           { text: 'Sampling', link: '/inference_backend/sampling' },
-          { text: 'Model Architectures', link: '/inference_backend/model_architectures' },
-          { text: 'Model Features', link: '/inference_backend/model_features' },
+          { text: 'Model', link: '/inference_backend/model' },
         ]
       },
       {

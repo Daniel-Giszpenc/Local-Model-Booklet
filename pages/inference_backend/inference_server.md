@@ -66,7 +66,7 @@ For exmaple, patches like amd-gpu-boost and component forks like rocm/triton or 
 This becomes a part of the desired experience question: do the benefits of this inference server with the added elbow grease outweigh the cost of supplying it for you?
 
 ### Software Support
-Just as taking inventory of the hardware to use is important, so is the software. Here things like packaging format (eg. gguf), [quantization](quantization.md), and models ([model architectures](model%20architectures.md), [model_features](model_features.md)) you want to use matter as different inference servers have different support limitations and focuses.
+Just as taking inventory of the hardware to use is important, so is the software. Here things like packaging format (eg. gguf), [quantization](quantization.md), and models ([model](model.md), [model_features](model_features.md)) you want to use matter as different inference servers have different support limitations and focuses.
 
 Sometimes this will be a complete lack like wanting the IQ4_K_R4 quant because it works really well on your hardware and cpu-only inference setup restricting you to ik_llama.cpp and sometimes it may be a slight edge where you plan to speculative decoding with your model and it has more mature support in a particular inference server such as vllm.
 
