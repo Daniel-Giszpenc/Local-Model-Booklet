@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+aws configure set region us-east-1 && rm ~/.aws/credentials && aws login && sleep 2 && python /mnt/nero-priv-data/Workspace/Tech/Dev/Minor/Local-Model-Booklet/scripts/aws_credentials_update.py
