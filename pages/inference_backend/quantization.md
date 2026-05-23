@@ -162,6 +162,8 @@ Some great resources that cover the different quantizations all grouped up are
 > [Model Formats Explained: GGUF vs GPTQ vs AWQ vs EXL2 | InsiderLLM](https://insiderllm.com/guides/model-formats-explained-gguf-gptq-awq-exl2/)
 > 
 > [Quantization for Local LLMs: How It Works and Which Formats Fit Your Setup](https://www.hardware-corner.net/quantization-local-llms-formats/)
+> 
+> [Measuring Model Quantisation Quality with KL Divergence | smcleod.net](https://smcleod.net/2026/04/measuring-model-quantisation-quality-with-kl-divergence/)
 
 These contain some options I haven't listed here.
 
