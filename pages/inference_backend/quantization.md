@@ -184,7 +184,11 @@ To learn about how Turbo Quant works I recommend these resources
 > [TurboQuant: What 3-Bit KV Caches Actually Mean for Your Inference Stack](https://themlsurgeon.substack.com/p/turboquant-what-3-bit-kv-caches-actually)
 
 > [!warning] Quick Word of Caution
-> More context does not equate to better result .....
+> More context does not equate to better result, sometimes it can even confuse the model more so be careful.
+> > [How Long Contexts Fail](https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html)
+
+Also, the big draw of KV cache quantization is reining in the quadratically rising size of resource demand but some model architectures will need this less like those with Gated Delta Network which provides linearly scaling context resource demand.
+> [LLMs-from-scratch/ch04/08_deltanet/README.md at main · rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch/blob/main/ch04/08_deltanet/README.md)
 ## Bringing It All Together
 It's very easy to get overwhelmed by all the options here but there are a few axes we can bring to shrink the problem down.
 
