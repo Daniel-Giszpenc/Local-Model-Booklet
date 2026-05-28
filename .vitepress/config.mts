@@ -15,17 +15,16 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: 'Overivew',
+        text: 'Overview',
         items: [
-          { text: 'Overview', link: '/overview' },
-          { text: 'Origin', link: '/index' },
+          { text: 'Origin & Principles', link: '/index' },
         ]
       },
       {
         text: 'Inference Backend',
         items: [
           { text: 'Inference Server', link: '/inference_backend/inference_server' },
-          { text: 'Low Level Pieces', link: '/inference_backend/tensor_libraries_gpu_kernels_drivers_&_the_like' },
+          { text: 'Low Level Pieces', link: '/inference_backend/low_level_pieces' },
           { text: 'Quantization', link: '/inference_backend/quantization' },
           { text: 'Sampling', link: '/inference_backend/sampling' },
           { text: 'Model', link: '/inference_backend/model' },
@@ -58,11 +57,18 @@ export default defineConfig({
           { text: 'Local Hosting Tunning', link: '/strategy/local_hosting_tuning' },
         ]
       },
+    //   {
+    //     text: 'Personal Setups & Experimentation',
+    //     items: [
+    //       { text: 'OCI Setup', link: '/extra/' },
+    //       { text: 'Personal Home Setup', link: '/extra/' },
+    //     ]
+    //   },
       {
-        text: 'Extra',
+        text: 'Deeper Understanding',
         items: [
-          { text: 'OCI Setup', link: '/servers/automation' },
-          { text: 'Personal Home Setup', link: '/servers/monitoring' },
+          { text: 'LLM Guts', link: '/deeper_understanding/llm_guts' },
+          { text: 'Not Yet Handled Resources', link: '/extra/stuff' },
         ]
       }
     ],
