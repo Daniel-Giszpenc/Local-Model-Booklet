@@ -17,11 +17,19 @@ All the optimization you learn about is doing 1 of 2 things
 1. It is doing less work. Think SGLang RadixAttention for prefix caching.
 > [Fast and Expressive LLM Inference with RadixAttention and SGLang - LMSYS Blog | LMSYS Org](https://www.lmsys.org/blog/2024-01-17-sglang/)
 
-2. It is utlizing more of the available hardware. Think vLLM's PagedAttention.
+2. It is utlizing more of the available hardware and features of that hardware. Think vLLM's PagedAttention.
 > [Paged Attention from First Principles: A View Inside vLLM | Hamza's Blog](https://hamzaelshafie.bearblog.dev/paged-attention-from-first-principles-a-view-inside-vllm/)
 
 The same applies higher in the stack where we look at [model features](model_features) like MTP and see them using more of the hardware in parallel for the second kind of optimization and plenty of other cases.
 
+The other fundamental of optimization I should mention is
+3. Intelligently distribute particular work to particular hardware.
+> [EVAL #008: NVIDIA Just Open-Sourced an Inference Engine. Now What? • Buttondown](https://buttondown.com/ultradune/archive/eval-008-nvidia-just-open-sourced-an-inference/)
+
+This one feels a bit less ovious and feels very close to optimization 2 which 2 is about utilizing hardware features and capability that weren't previously in use like multi-threading with available threads and page cache with available memory.
+
+This optimization is about intelligently distributing diverse work over diverse hardware. The idea is different hardware pieces will come with different advantages (eg. GPU matrix calculation ability) and bottlenecks (eg. network egress costs) so figuring out how to pass around your work materials and where to do that work can result in significant gains.
+> [1000 Players - One Game of Doom - YouTube](https://www.youtube.com/watch?v=3f9tbqSIm-E)
 ## Look for those Fundamentals as Low as You Can
 The big idea here is that defaults are meant to support most users often enough and not you specifically. That leaves room to do less work than the defaults instruct and fit the hardware tighter than the defaults instruct.
 
@@ -45,3 +53,27 @@ The desired experience is still on top so if having the most optimal setup is no
 - what features are not being used and how could they be disabled
 
 Asking in multiple ways and asking for multiple response per question can help get a useful lead to chase sometimes when you don't know what you're looking for.
+
+
+## A Finding Example
+KTransformers is a great example of a project that shows optionality at this extremely low level being able to pair with other inference servers like llama.cpp and sglang where it becomes an alternative backend specially boosting inference capabilities for the large upfront context prefill where speed is important use case.
+
+I have some resources on it here and I recommend you take this not as just a singular option to consider but a spark to think on so it may become a flame. What other tools are out there that you can swap in and out to easily tinker with the composition of pieces at lowest level for the highest return.
+
+> llama.cpp/ktransformers
+> 
+> switch out ggml backend or sglang-kt
+> 
+> [KTransformers Documentation - KTransformers Docs](https://ktransformers.net/en/docs
+> 
+> [Switching from llama.cpp/ktransformers, seeking advice/guidance · ikawrakow/ik_llama.cpp · Discussion #242](https://github.com/ikawrakow/ik_llama.cpp/discussions/242)
+> 
+> [ktransformers/doc/en/long_context_introduction.md at main · kvcache-ai/ktransformers](https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/long_context_introduction.md)
+> 
+> [KTransformers: Run Large Language Models with 90% Less GPU Memory | by Md Monsur ali | Level Up Coding](https://levelup.gitconnected.com/ktransformers-run-large-language-models-with-90-less-gpu-memory-a9f8c3d1b96f)
+> 
+> [[Feature] KTransformers Integration to Support CPU/GPU Hybrid Inference for MoE Models · Issue #11425 · sgl-project/sglang](https://github.com/sgl-project/sglang/issues/11425)
+> 
+> [Loads of interesting ideas in the 'ktransformers' report for mixed CPU/GPU inference · ggml-org/llama.cpp · Discussion #8721](https://github.com/ggml-org/llama.cpp/discussions/8721)
+> 
+> [KTransformers: Optimizing Local Deployment and Long Context Inference for Large Language Models | by ArXiv In-depth Analysis | Medium](https://archive.ph/20251111144444/https://medium.com/@jenray1986/ktransformers-optimizing-local-deployment-and-long-context-inference-for-large-language-models-0f01b3a2d544)
