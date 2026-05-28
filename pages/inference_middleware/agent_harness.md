@@ -19,3 +19,9 @@ https://www.dbreunig.com/2026/02/25/two-things-i-believe-about-coding-agents.htm
 
 https://mariozechner.at/posts/2025-11-30-pi-coding-agent/
 https://lucumr.pocoo.org/2026/1/31/pi/
+
+https://magazine.sebastianraschka.com/p/components-of-a-coding-agent
+
+https://codinginterviewsmadesimple.substack.com/p/why-ai-agents-are-good-system-design
+
+https://cameronrwolfe.substack.com/p/ai-agents

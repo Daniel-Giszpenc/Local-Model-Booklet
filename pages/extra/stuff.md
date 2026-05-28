@@ -34,9 +34,9 @@ https://read.theaimerge.com/p/the-smartest-ai-engineers-will-bet
 > Across the industry, only a small number of teams have managed to move beyond pilots and demos. And when systems fail, it’s rarely because of the model itself. It’s the engineering around the model: how systems are designed, monitored, tested, and improved over time. These are the same problems software teams have always faced, but made harder this time, due to the non-deterministic behavior of AI Systems.
 
 
-THIS
-https://read.theaimerge.com/p/understanding-llm-optimization-techniques
 
+
+https://jarvislabs.ai/blog/expert-parallelism-mixed-strategies-vllm
 
 https://read.theaimerge.com/p/understanding-llm-inference
 
@@ -50,7 +50,48 @@ https://www.mercity.ai/blog-post/guide-to-fine-tuning-llms-with-lora-and-qlora/
 
 https://rajatpandit.com/ai-infrastructure/the-integer-moment/
 
+https://rajatpandit.com/insights/
+
 https://huggingface.co/docs/transformers/en/kv_cache
+
+tools and projects
+https://github.com/Tiiny-AI/PowerInfer
+https://github.com/microsoft/LLMLingua
+
+neat summary on mini max model insights
+https://www.linkedin.com/posts/sebastianraschka_the-minimax-m2-series-was-one-of-the-most-share-7465419259985174529-p3ub/
+
+[ArXiv In-depth Analysis – Medium](https://medium.com/@jenray1986?source=post_page---post_author_info--0f01b3a2d544---------------------------------------)
+
+[xlite-dev/Awesome-LLM-Inference: 📚A curated list of Awesome LLM/VLM Inference Papers with Codes: Flash-Attention, Paged-Attention, WINT8/4, Parallelism, etc.🎉](https://github.com/xlite-dev/Awesome-LLM-Inference)
+
+[chenhongyu2048/LLM-inference-optimization-paper: Summary of some awesome work for optimizing LLM inference](https://github.com/chenhongyu2048/LLM-inference-optimization-paper)
+
+## need to try bringing these in
+[Compare `ik_llama.cpp`, `vLLM`, `llama.cpp`, and `ktransformers` engines · Issue #11 · ubergarm/r1-ktransformers-guide](https://github.com/ubergarm/r1-ktransformers-guide/issues/11)
+
+https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices
+https://newsletter.pragmaticengineer.com/p/what-is-inference-engineering
+https://github.com/ikawrakow/ik_llama.cpp/blob/main/docs/parameters.md
+
+nice overview, not sure where to put
+https://www.weka.io/learn/guide/ai-ml/what-is-llm/
+https://www.clarifai.com/blog/llm-model-architecture/
+https://huggingface.co/blog/dvilasuero/choosing-best-open-source-ai-models
+https://medium.com/@sahin.samia/llm-inference-optimization-techniques-a-comprehensive-analysis-1c434e85ba7c
+
+THIS
+https://read.theaimerge.com/p/understanding-llm-optimization-techniques
+
+should see if I want to add these in
+https://read.theaimerge.com/p/the-ai-engineers-guide-to-inference
+https://read.theaimerge.com/p/understanding-llm-inference
+https://jarvislabs.ai/blog/vllm-sglang-trtllm-comparison
+https://buttondown.com/ultradune/archive/eval-007-the-great-moe-shift-how-mixture-of/
+https://bhavishyapandit9.substack.com/p/deep-dive-into-quantization-of-llms
+https://www.clarifai.com/blog/llm-inference-optimization/
+
+https://medium.com/@jsshankar/demystifying-production-inference-serving-for-large-language-models-in-2026-7cfeea701b53
 
 #### I want to make a section on link dump for tech depths at some point
 [What I Wish Someone Had Told Me About Tensor Computation Libraries | George Ho](https://www.georgeho.org/tensor-computation-libraries/)
@@ -71,3 +112,28 @@ https://huggingface.co/docs/transformers/en/kv_cache
 [Introduction to ggml | ngxson's blog](https://blog.ngxson.com/introduction-to-ggml)
 
 https://youtu.be/vW30o4U9BFE
+
+https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/
+
+https://thinkingmachines.ai/blog/lora/
+
+https://aman.ai/primers/ai/token-sampling/
+
+https://aman.ai/
+
+https://builtin.com/artificial-intelligence/transformer-neural-network
+
+https://hamzaelshafie.bearblog.dev/blog/
+
+https://themlsurgeon.substack.com/p/transformer-attention-backwards
+
+https://blog.ml.cmu.edu/
+
+https://huggingface.co/blog/Kseniase/testtimecompute
+
+### would be neat to train one day
+https://github.com/karpathy/nanochat
+[BEST-Route: Adaptive LLM Routing with Test-Time Optimal Compute](https://www.emergentmind.com/papers/2506.22716)  
+[Adaptive LLM Routing Under Budget Constraints](https://www.emergentmind.com/papers/2508.21141)  
+[Think Anywhere in Code Generation](https://www.emergentmind.com/papers/2603.29957)  
+[SkillOpt: Self-Evolving Agent Skills](https://api.emergentmind.com/papers/2605.23904)
