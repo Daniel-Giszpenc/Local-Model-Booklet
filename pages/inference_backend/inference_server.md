@@ -20,7 +20,7 @@ Think about what happens when you use a cloud hosted model like opus with an age
 
 Regarding hardware usage it is important to note that the inference server is more so a command center than the battalion on the field. When you send a request the inference server will dispath a kernel program with purpose of running the computation to forge a response for that request. Then the inference server will pass that response on back.
 
-Different inference servers come with different programs they can dispath to the hardware and that is where the hardware utilization different comes from. When looking to min-max you hardware usage it is best to look not just at the inference server but the programs it dispathes as well - [tensor_libraries_gpu_kernels_drivers_&_the_like](tensor_libraries_gpu_kernels_drivers_&_the_like.md).
+Different inference servers come with different programs they can dispath to the hardware and that is where the hardware utilization different comes from. When looking to min-max you hardware usage it is best to look not just at the inference server but the programs it dispatches as well - [Low Level Pieces](low_level_pieces.md).
 
 ## Decision Variables
 
@@ -107,7 +107,7 @@ There are wrapper options like Ollama and LM Studio built around llama.cpp and g
 > https://lmstudio.ai/docs/developer
 
 #### Forks
-Forks with some being tmp phenomena to provide access to a certain feature and others being main stay for hardware and performance specific benefits like ik_llama.cpp. Know that some stability and feature support such as broad hardware optimization may be let down by going to a fork.
+Forks with some being tmp phenomena to provide access to a certain inference feature and others being main stay for hardware and performance specific benefits like ik_llama.cpp. Know that some stability and feature support such as broad hardware optimization may be let down by going to a fork.
 > https://github.com/ikawrakow/ik_llama.cpp/tree/main
 > https://github.com/TheTom/llama-cpp-turboquant
 
@@ -123,7 +123,20 @@ Niche projects like ds4 where the inference server isn't trying to be a generali
 > https://github.com/huggingface/candle
 > https://github.com/EricLBuehler/candle-vllm
 
+#### Research
+Research projects like KTransformers, Exllamav3, and PowerInfer offer cutting edge development and capability where the the benefits for specific use cases can be tremendous and the cost un-tennable where things like stability and wide support are critical but for many that have the appropiate use cases for them they fit perfectly.
+
+> [turboderp-org/exllamav3: An optimized quantization and inference library for running LLMs locally on modern consumer-class GPUs](https://github.com/turboderp-org/exllamav3)
+> 
+> [Tiiny-AI/PowerInfer: High-speed Large Language Model Serving for Local Deployment](https://github.com/Tiiny-AI/PowerInfer)
+> 
+> [kvcache-ai/ktransformers: A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations](https://github.com/kvcache-ai/ktransformers)
 ## Bringing It All Together
  Write down your priorities over all of the above decision and consideration areas. Then write circumstances (hardware available and other such details). Take all of that in a doc and query a bunch of different models with it. In your queries don't just ask for the best option for you but ask for the bots' thoughts on every available option (you can use the last section to help steer the model here, keep in mind there is more out there than what I wrote down which was more the breadcrumbs to get you searching) with reasoning for what makes each option good and bad for you.
 
 To get a setup that fits you priority spread over the above what I recommend is writing down your priorities over all of the above and then and circumstances (hardware available and other such details) on a document somewhere and then querying a bunch of different models with that full doc. In your queries don't just ask for the best option for you but ask for the bots' thoughts on every available option with reasoning for what makes it good and bad for you. 
+
+Work to find balance over option to priority distributions like below
+- wide feature and model support: main-line inference server like llama.cpp
+- output generation optimized: ik_llama.cpp
+- input processing optimized: KTransformers

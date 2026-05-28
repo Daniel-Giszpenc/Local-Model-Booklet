@@ -18,7 +18,7 @@ To understand how this works remember that an LLM effectively stores a distribut
 > [Understanding What an LLM is and How it Works 4/4: How Do LLMs Know Stuff?](https://lecharles.medium.com/understanding-what-an-llm-is-and-how-it-works-4-4-how-do-llms-know-stuff-b3b40b40e017)
 
 
-The optimization quantization makes is doing less work as talked about in the [low level pieces](./tensor_libraries_gpu_kernels_drivers_&_the_like) page where the same operations can be done with less expensive numbers as opposed to leveraging the hardware more adeptly.
+The optimization quantization makes is doing less work as talked about in the [low level pieces](low_level_pieces.md) page where the same operations can be done with less expensive numbers as opposed to leveraging the hardware more adeptly.
 
 That said, keep in mind some quantizations are specifically supported by certain inference servers and some are specifically tuned to fits specific hardware and specific models very well to creating a mix of less work and closer glove fit to the hardware.
 
